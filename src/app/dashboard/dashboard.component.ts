@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   ProjectCost: number;
   CurrentExpenditure: number;
   AvailableFunds: number;
+  ToDay: Date;
 
   Clients: string[];
   Projects: string[];
@@ -35,10 +36,11 @@ export class DashboardComponent implements OnInit {
     this.NoOfTeamMembers = 67;
     this.TotalCostOfAllProjects = 240;
     this.PendingTasks = 15;
-    this.UpComingProjects = 2;
+    this.UpComingProjects = 0.2;
     this.ProjectCost = 2113507;
     this.CurrentExpenditure = 96788;
     this.AvailableFunds = 52536;
+    this.ToDay = new Date();
 
     this.Clients = [
       "ABC Infotech Ltd.", "DEF Software Solutions", "GHI Industries"
@@ -98,6 +100,29 @@ export class DashboardComponent implements OnInit {
     for(var i=2021; i>=2018; i--){
       this.Years.push(i);
     }   
+  }
+
+  onProjectChange($event: any){
+    if ($event.target.innerHTML === ' Project A'){
+      this.ProjectCost = 2113507;
+      this.CurrentExpenditure = 96788;
+      this.AvailableFunds = 52536;
+    }
+    else if ($event.target.innerHTML === ' Project B') {
+      this.ProjectCost = 983907;
+      this.CurrentExpenditure = 2356;
+      this.AvailableFunds = 4598;
+    }
+    else if ($event.target.innerHTML == " Project C") {
+      this.ProjectCost = 108330;
+      this.CurrentExpenditure = 5656;
+      this.AvailableFunds = 988;
+    }
+    else if ($event.target.innerHTML == " Project D") {
+      this.ProjectCost = 258330;
+      this.CurrentExpenditure = 4658;
+      this.AvailableFunds = 792;
+    }
   }
 
 }
