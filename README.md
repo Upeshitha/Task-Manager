@@ -1,5 +1,9 @@
 # TaskManager
 
+## The Progress
+![task manager](https://user-images.githubusercontent.com/39452187/126053343-61206950-2f38-488a-bcfa-e8fa065c8af3.JPG)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
 ## Development server
